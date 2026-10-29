@@ -1,0 +1,8 @@
+{
+  "name": "hy-nomas-resource",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node build.mjs" },
+  "repository": { "type": "git", "url": "https://github.com/codeRelaxLife/hy-nomas-site" },
+  "homepage": "https://hy-nomas.com"
+}
