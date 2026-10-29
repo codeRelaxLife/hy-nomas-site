@@ -11,4 +11,4 @@ the deployable `dist/` directory. Cloudflare Pages can use that command with
 `dist` as its build output directory. No Cloudflare token belongs in this
 repository.
 
-The Vast.ai affiliate entry is disabled by default in `src/data/affiliates.js`.
+The Vast.ai affiliate entry is controlled by `status` in `src/data/affiliates.js`.

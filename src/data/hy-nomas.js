@@ -16,5 +16,6 @@ export const files = [
 ];
 export const reports = [
   {setup:'RTX 4090 · ComfyUI port', result:'10 seconds of 1280 × 704 video in 85 seconds; 832 × 480 in 34 seconds. Warm run, two 5-second segments.', source:'Port author’s README', url:sources.readme+'#speed-and-memory', verifiedOn:checked},
-  {setup:'12 / 16 / 24 GB · simulated', result:'93 / 91 / 89 seconds respectively for 10 seconds at 1280 × 704. The author restricted memory on a 4090; these are not tests on three cards.', source:'Port author’s README', url:sources.readme+'#speed-and-memory', verifiedOn:checked},
+  {setup:'12 / 16 / 24 GB · simulated', result:'93 / 91 / 89 seconds respectively for 10 seconds at 1280 × 704. Simulated on an RTX 4090 by holding back the rest of its memory, before the last kernel fusions. Not measured on a 12, 16 or 24 GB card.', source:'Port author’s README', url:sources.readme+'#speed-and-memory', verifiedOn:checked},
+  {setup:'RTX 4090 · 20-second world', result:'About 3 minutes 15 seconds at 1280 × 704, including 91 seconds of decoding. Starting from an image adds 2–6 seconds, according to the port author.', source:'Port author’s README', url:sources.readme+'#speed-and-memory', verifiedOn:checked},
 ];

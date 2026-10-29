@@ -1,6 +1,6 @@
 export function renderAffiliate(affiliate) {
   if (!affiliate || affiliate.status !== 'live') return '';
-  return `<aside class="callout affiliate"><p>If your card has limited VRAM and you want to experiment before buying, you can compare the cost of renting a cloud GPU. Availability and prices vary. <a href="/go/vast" rel="sponsored nofollow noopener" target="_blank">Explore GPU rentals on Vast.ai</a></p><p class="disclosure">${affiliate.disclosure}</p><p><a href="/about/#affiliate-links">About affiliate links</a></p></aside>`;
+  return `<aside class="callout affiliate"><p class="disclosure">${affiliate.disclosure}</p><p>If your card has limited VRAM and you want to experiment before buying, you can compare the cost of renting a cloud GPU. Availability and prices vary. <a href="/go/vast" rel="sponsored nofollow noopener" target="_blank">Explore GPU rentals on Vast.ai</a></p><p><a href="/about/#affiliate-links">About affiliate links</a></p></aside>`;
 }
 
 export function renderAffiliateAbout(affiliate) {
