@@ -9,6 +9,14 @@ export const sources = {
   notice: 'https://github.com/PedroMarinhoDev/ComfyUI-Hy-Nomas/blob/main/NOTICE',
   license: 'https://huggingface.co/PedroMarinhoDev/Hy-Nomas-ComfyUI/blob/main/LICENSE-NVIDIA-ONEWAY-NONCOMMERCIAL.txt',
 };
+export const demoInfo = {
+  fps: 24, resolution: '1280 × 704', smallResolution: '832 × 480',
+  segmentSeconds: 5, segmentSamplingSeconds: 17, cachePassSeconds: 5,
+  decodeSeconds: 91, worldSeconds: 20, segments: 4, totalTime: '3 min 15 s',
+  imageExtraTime: '2–6 s', driveTurnSeconds: 1, driveTime: '3.5–4 s',
+  driveSampleTime: '4.3 s', historyFrames: 18, imageLatentFrames: 3,
+  source: sources.readme, verifiedOn: checked,
+};
 export const files = [
   {name:'hy_nomas_distil_int8.safetensors', folder:'models/diffusion_models', size:'9.06 GB', url: sources.weights, source:'Port model files', verifiedOn:checked},
   {name:'hy_nomas_pixelumm_fp8.safetensors', folder:'models/vae', size:'9.13 GB', url:sources.weights, source:'Port model files', verifiedOn:checked},
@@ -39,6 +47,11 @@ export const answers = [
     question: 'Can Hy-Nomas start from an image?',
     answer: 'The ComfyUI port offers a Start From Image workflow. The port author explains that it encodes the image into the world’s history; this is a port feature, not a native image input trained into the underlying model.',
     source: sources.readme+'#start-from-an-image', sourceLabel: 'Port image workflow', page: '/comfyui/', pageLabel: 'ComfyUI setup guide', verifiedOn: checked,
+  },
+  {
+    question: 'How do I control the camera in Hy-Nomas?',
+    answer: 'In the ComfyUI port, use Camera Recording to record a path with W/A/S/D and arrow keys, or use Camera Keys for a typed timeline such as "W 2, W+Left 1.5, idle 0.5". A camera path exported from Tencent’s demo can be pasted into Camera Recording under { } JSON. Drive mode lets you steer the world one turn at a time.',
+    source: sources.readme+'#how-it-works', sourceLabel: 'Port camera controls', page: '/comfyui/#camera-control', pageLabel: 'Camera control guide', verifiedOn: checked,
   },
   {
     question: 'Can I use Hy-Nomas commercially?',
